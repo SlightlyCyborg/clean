@@ -36,3 +36,13 @@
 	(put-output "Put pillow at head")
 	(wait-on-user))))
 
+(defun take-dishes-to-kitchen ()
+  (loop
+   (put-output "Scan the room. Are there dishes in the room?")
+   (if (yes?)
+       (progn
+	 (put-output "Breath and consider the perfection to which you will take the dishes to the kitchen")
+	 (wait-on-user)
+	 (put-output "Gather as many dishes as you can and take them to the kitchen")
+	 (wait-on-user))
+       (return t))))
