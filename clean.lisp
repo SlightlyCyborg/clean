@@ -46,3 +46,15 @@
 	 (put-output "Gather as many dishes as you can and take them to the kitchen")
 	 (wait-on-user))
        (return t))))
+
+(defun empty-dishwasher-if-needed ()
+  (put-output "Breath and cosider the perfection to which you will empty the dish washer.")
+  (loop
+     (put-output "Is the dishwasher empty?")
+     (if (no?)
+	 (progn
+	   (put-output "Breath and consider the perfection to which you will move an item out of the dishwasher.")
+	   (wait-on-user)
+	   (put-output "Move item and place it in perfect spot.")
+	   (wait-on-user))
+	 (return t))))
