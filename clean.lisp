@@ -72,3 +72,32 @@
 	   (put-output "Wash and place the dish in the dishwasher")
 	   (wait-on-user))
 	 (return t))))
+
+
+(defun start-dishwasher ()
+  (put-output "Breath and consider the good job you have just finished.")
+  (wait-on-user)
+  (put-output "Ok. Put the soap in the washer and start the washer."))
+
+
+(defun do-dishes ()
+  (take-dishes-to-kitchen)
+  (empty-dishwasher-if-needed)
+  (fill-dishwasher-if-needed)
+  (start-dishwasher))
+
+
+(defun hang-laundry ()
+  (put-output "Meditate about what you are about to do.")
+  (wait-on-user)
+  (loop
+     (put-output "Is there still clothing to be hung?")
+     (if (yes?)
+	 (progn
+	   (put-output "Breath")
+	   (wait-on-user)
+	   (put-output "Put the peice of clothing away.")
+	   (wait-on-user)))
+     (return t)))
+
+
