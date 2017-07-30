@@ -58,3 +58,17 @@
 	   (put-output "Move item and place it in perfect spot.")
 	   (wait-on-user))
 	 (return t))))
+
+
+(defun fill-dishwasher-if-needed ()
+  (put-output "Breath and consider the perfection to which you will fill the dishwasher")
+  (wait-on-user)
+  (loop
+     (put-output "Take a deep breath. Can a dish be added to the dish washer?")
+     (if (yes?)
+	 (progn
+	   (put-output "Take a deep breath.")
+	   (wait-on-user)
+	   (put-output "Wash and place the dish in the dishwasher")
+	   (wait-on-user))
+	 (return t))))
