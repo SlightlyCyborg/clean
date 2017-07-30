@@ -101,3 +101,18 @@
      (return t)))
 
 
+
+(defun sort-hanging-laundry ()
+  (put-output "Meditate about what you are going to do.")
+  (wait-on-user)
+  (loop
+     (put-output "Have you considered every item of clothing?")
+     (if (no?)
+	 (progn
+	   (put-output "Breath")
+	   (wait-on-user)
+	   (put-output "Pick up the best shirt, pant, and undies")
+	   (wait-on-user)
+	   (put-output "Organize them as an outfit")
+	   (wait-on-user))
+	 (return t))))
