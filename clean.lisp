@@ -115,4 +115,15 @@
 	   (wait-on-user)
 	   (put-output "Organize them as an outfit")
 	   (wait-on-user))
-	 (return t))))
+	 (return t)))
+  (put-output "Now it is time to review.")
+  (wait-on-user)
+  (put-output "Is there clothing that does not have matches?")
+  (if (yes?)
+      (progn
+	(put-output "Run the king, queens algorithm to find matches, making sure that the most desirable cloths have matches if there is an unsettleable tie between 2 sets.")
+	(wait-on-user)
+	(put-output "Discard clothing that could not find a match"))))
+
+
+
